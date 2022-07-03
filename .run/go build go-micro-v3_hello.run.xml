@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="hello" type="GoApplicationRunConfiguration" factoryName="Go Application" nameIsGenerated="true">
+    <module name="go-micro-v3" />
+    <working_directory value="$PROJECT_DIR$" />
+    <package value="go-micro-v3/cmd/hello" />
+    <directory value="$PROJECT_DIR$" />
+    <filePath value="$PROJECT_DIR$/cmd/hello/app.go" />
+  </configuration>
+</component>
