@@ -20,7 +20,7 @@ func main() {
 	helloWorldService := hello.NewHelloWorldService(cons.ServerMicroServer, service.Client())
 	callResponse, err := helloWorldService.Call(context.Background(), &hello.CallRequest{Name: "张三"})
 	if err != nil {
-		log.Fatal("调用 notice 服务的 send 接口失败 -> ", err)
+		log.Fatal("调用 hello 服务的 send 接口失败 -> ", err)
 		return
 	}
 	log.Println("执行成功 -> ", callResponse.Msg)
