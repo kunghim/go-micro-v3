@@ -11,6 +11,7 @@ import (
 func main() {
 	// 创建 micro 服务
 	service := micro.NewService(
+		micro.Address(cons.ClientMicroAddress),
 		// 设置 micro 服务名称
 		micro.Name(cons.ClientMicroServer),
 	)

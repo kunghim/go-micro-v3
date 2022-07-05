@@ -12,6 +12,7 @@ import (
 func main() {
 	// 创建 micro 服务
 	service := micro.NewService(
+		micro.Address(cons.HelloMicroAddress),
 		// 设置 micro 服务名称
 		micro.Name(cons.ServerMicroServer),
 	)
@@ -22,7 +23,7 @@ func main() {
 	noticeService := notice.NewNoticeService(cons.NoticeMicroServer, service.Client())
 	err := hello.RegisterHelloWorldHandler(service.Server(), handler.HelloService{NoticeServer: noticeService})
 	if err != nil {
-		log.Fatal("注册 server service 失败 -> ", err)
+		log.Fatal("注册 hello service 失败 -> ", err)
 		return
 	}
 
